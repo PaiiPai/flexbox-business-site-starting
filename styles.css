@@ -1,0 +1,467 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e6e6e6;
+    color: #333;
+}
+
+.tablet, .mobile-nav, .mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 870px) {
+    html {
+        font-size: 14px;
+    }
+
+    .laptop {
+        display: none;
+    }
+
+    .tablet {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    html {
+        font-size: 12px;
+    }
+
+    .laptop-nav {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: block;
+    }
+}
+
+header {
+    max-width: 100%;
+    height: 445px;
+    background-image: url("resources/images/speed-internet-technology-background.webp");
+    background-size: cover;
+    background-position: 50% 80%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    text-align: center;
+
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+nav {
+    background-color: #2C3E50;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.125rem;
+    display: inline-block;
+}
+
+footer {
+    background-color: #1E90FF;
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+    position: sticky;
+    bottom: 0;
+    max-width: 100%;
+}
+
+.mobile-nav {
+    color: #1E90FF;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 20px;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+nav li a {
+    color: #ecf0f1;
+    font-weight: bold;
+    padding: 1.625rem 0.75rem;
+    transition: color 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+a:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    bottom: 0;
+    left: 0;
+    background-color: #3498db;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+li:hover {
+    background-color: #34495e;
+    /* Change background color on hover */
+}
+
+li:hover a:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+section {
+    padding: 2.5rem;
+}
+
+section h2 {
+    line-height: 1.8;
+    border-left: 3px solid #1E90FF;
+    padding-left: 0.25rem;
+    background-color: #f0f0f0;
+}
+
+h1,
+h2,
+h3 {
+    color: #1E90FF;
+}
+
+p,
+figcaption {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: #e6e6e6;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1,
+header h2 {
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 3px 3px 15px #2C3E50, 3px 3px 15px #6187ad;
+}
+
+header .center {
+    height: 100%;
+    flex-direction: column;
+}
+
+.search {
+    position: absolute;
+    max-width: 100%;
+    top: 1%;
+    right: 2%;
+}
+
+input.search-box {
+    height: 36px;
+    font-size: 1rem;
+    background-image: url(https://cdn2.hubspot.net/hubfs/4004166/bioticresearch_website_assets/images/search_icon.png);
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    padding-left: 2.5rem;
+    background-color: #fff;
+    border: 1px solid #999;
+    border-radius: 21px;
+    -webkit-appearance: none;
+}
+
+input.search-box:focus {
+    width: 350px;
+    outline: 3px solid #1E90FF;
+}
+
+@media only screen and (max-width: 780px) {
+
+    .search {
+        left: 40%;
+        max-width: 20%;
+    }
+
+    input.search-box {
+        width: 100%;
+        margin: 5% 0 0 0;
+        outline: none;
+        transition: all 0.3s;
+    }
+
+    input.search-box:focus {
+        width: calc(100% + 30%);
+        margin: 5% 0 0 -20%;
+        outline: 3px solid #1E90FF;
+    }
+
+}
+
+header {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about {
+    background-image: url("resources/images/about-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 100%;
+    height: auto;
+}
+
+.about-content {
+    display: flex;
+}
+
+.about-content .center {
+    margin: 5%;
+    width: 60%;
+}
+
+.CEO-photo {
+    width: 30%;
+    height: 480px;
+    overflow: hidden;
+}
+
+.CEO-photo img {
+    width: 100%;
+    max-height: 86%;
+    object-fit: cover;
+    object-position: 50% 10%;
+}
+
+.CEO-photo figcaption {
+    text-align: center;
+}
+
+@media only screen and (max-width: 780px) {
+    .CEO-photo {
+        height: 320px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-content .center {
+        width: 100%;
+        text-align: center;
+    }
+
+    .CEO-photo {
+        min-width: 100px;
+        height: 130px;
+    }
+}
+
+#services {
+    height: 600px;
+    background-image: url('resources/images/service-background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.services-container {
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service {
+    max-width: 25%;
+    height: 50%;
+    flex: 1;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-size: cover;
+    padding: 1.25rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.service h3,
+.service p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.service h3 {
+    margin: 0.75rem 0;
+}
+
+@media only screen and (max-width: 780px) {
+    #services {
+        height: 420px;
+    }
+
+    .service {
+        height: 70%;
+    }
+
+    .service h3,
+    .service p {
+        line-height: 1.2;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    #services {
+        height: 350px;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    #services {
+        height: auto;
+    }
+
+    .services-container {
+        flex-direction: column;
+    }
+
+    .service {
+        max-width: none;
+        max-height: 150px;
+        margin: 0;
+    }
+}
+
+#projects {
+    text-align: center;
+}
+
+#projects h2 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.projects-container {
+    height: 335px;
+    margin: 5% 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.overview,
+.project-details {
+    flex: 1;
+    width: 40%;
+    height: 100%;
+    padding: 1.25rem;
+    margin: 0 1%;
+    box-sizing: border-box;
+}
+
+.overview {
+    display: flex;
+    align-items: center;
+}
+
+.overview h3 {
+    font-size: 1.8rem;
+}
+
+.project-details {
+    background-color: #2C3E50;
+}
+
+.project-details a {
+    color: #1E90FF;
+    padding: 1rem 0.7rem;
+    border-radius: 5px;
+}
+
+.project-details a:active {
+    background-color: #1E90FF;
+    color: #ecf0f1;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 780px) {
+    .project-details p {
+        margin: 0;
+        line-height: 1.3;
+    }
+
+    .project-details a {
+        display: inline-block;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    .projects-container {
+        height: auto;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+    .overview,
+    .project-details {
+        width: 80%;
+    }
+}
+
+#contact {
+    padding: 0;
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+#contact h3 {
+    margin: 1.5%;
+}
