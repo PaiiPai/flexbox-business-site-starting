@@ -192,7 +192,7 @@ header .center {
 .search {
     position: absolute;
     max-width: 100%;
-    top: 1%;
+    top: 2%;
     right: 2%;
 }
 
@@ -210,14 +210,14 @@ input.search-box {
 }
 
 input.search-box:focus {
-    width: 350px;
     outline: 3px solid #1E90FF;
 }
 
 @media only screen and (max-width: 780px) {
 
     .search {
-        left: 40%;
+        top: 5%;
+        left: 38%;
         max-width: 20%;
     }
 
@@ -229,11 +229,18 @@ input.search-box:focus {
     }
 
     input.search-box:focus {
-        width: calc(100% + 30%);
-        margin: 5% 0 0 -20%;
+        width: calc(100% + 50%);
+        margin: 5% 0 0 -30%;
         outline: 3px solid #1E90FF;
     }
 
+}
+
+@media only screen and (max-width: 490px) {
+    .search {
+        max-width: 25%;
+        left: 35%;
+    }
 }
 
 header {
