@@ -139,7 +139,6 @@ a:before {
 
 li:hover {
     background-color: #34495e;
-    /* Change background color on hover */
 }
 
 li:hover a:hover:before {
